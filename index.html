@@ -8,24 +8,35 @@
   </head>
   <body>
     <h1>Color Game</h1>
-    <div id="game-cont">
-      <p id="info" data-testid="gameInstructions">Guess the correct color!</p>
+    <p id="info" data-testid="gameInstructions">Guess the correct color!</p>
+    
+    <button id="start-game-btn" data-testid="startGameButton">Start Game</button>
+    
+    <div id="primary-selection">
+      <p>Pick a primary color:</p>
+      <button class="primary-btn" data-color="red" data-testid="primaryRed">Red</button>
+      <button class="primary-btn" data-color="blue" data-testid="primaryBlue">Blue</button>
+      <button class="primary-btn" data-color="green" data-testid="primaryGreen">Green</button>
+    </div>
 
+    <div id="game-cont">
       <div id="target" data-testid="colorBox"></div>
+      
       <div id="options">
-        <button data-testid="colorOption" class="opt-btn" value="#867cf0" id="btn1"></button>
-        <button data-testid="colorOption" class="opt-btn" value="#9189e8" id="btn2"></button>
-        <button data-testid="colorOption" class="opt-btn" value="#6d699e" id="btn3"></button>
-        <button data-testid="colorOption" class="opt-btn" value="#8d88c4" id="btn4"></button>
-        <button data-testid="colorOption" class="opt-btn" value="#4d4882" id="btn5"></button>
-        <button data-testid="colorOption" class="opt-btn" value="#8f89d1" id="btn6"></button>
+        <button data-testid="colorOption" class="opt-btn" id="btn1"></button>
+        <button data-testid="colorOption" class="opt-btn" id="btn2"></button>
+        <button data-testid="colorOption" class="opt-btn" id="btn3"></button>
+        <button data-testid="colorOption" class="opt-btn" id="btn4"></button>
+        <button data-testid="colorOption" class="opt-btn" id="btn5"></button>
       </div>
+
       <p id="status" data-testid="gameStatus"></p>
       <div>
-        <p>Score: <span id="score" data-testid="score"></span></p>
+        <p>Score: <span id="score" data-testid="score">0</span></p>
         <button id="new-game-btn" data-testid="newGameButton">New Game</button>
       </div>
     </div>
+
     <script src="./main.js"></script>
   </body>
 </html>
