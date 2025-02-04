@@ -7,35 +7,56 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Color Game</h1>
-    <p id="info" data-testid="gameInstructions">Guess the correct color!</p>
-    
-    <button id="start-game-btn" data-testid="startGameButton">Start Game</button>
-    
-    <div id="primary-selection">
-      <p>Pick a primary color:</p>
-      <button class="primary-btn" data-color="red" data-testid="primaryRed">Red</button>
-      <button class="primary-btn" data-color="blue" data-testid="primaryBlue">Blue</button>
-      <button class="primary-btn" data-color="green" data-testid="primaryGreen">Green</button>
-    </div>
+    <header>
+      <h1>Color Game</h1>
+    </header>
+    <main>
+      <p id="info" data-testid="gameInstructions">This game will test how well you can differentiate similar colors. <br> Guess the correct color!</p>
+      <div id="instructions">
+        <h3>Game Instructions</h3>
+        <ul>
+          <li>Select a primary color to start the game</li>
+          <li>Carefully observe the target color in the box</li>
+          <li>From the Six(6) available option boxes, pick your guess</li>
+          <li>You win if you score up to 5</li>
+          <li>You lose once you go below 0</li>
+        </ul>
+        <p>All the Best!</p>
+      </div> 
+      <button id="start-game-btn" data-testid="startGameButton">Start Game</button>
+      <hr>
+      <div id="primary-selection">
+        <p>Pick a primary color:</p>
+        <div id="primary-opt">
+          <button id="red" class="primary-btn" data-color="red">Red</button>
+          <button id="blue" class="primary-btn" data-color="blue">Blue</button>
+          <button id="green" class="primary-btn" data-color="green">Green</button>
+        </div>
+      </div>
 
-    <div id="game-cont">
-      <div id="target" data-testid="colorBox"></div>
-      
-      <div id="options">
-        <button data-testid="colorOption" class="opt-btn" id="btn1"></button>
-        <button data-testid="colorOption" class="opt-btn" id="btn2"></button>
-        <button data-testid="colorOption" class="opt-btn" id="btn3"></button>
-        <button data-testid="colorOption" class="opt-btn" id="btn4"></button>
-        <button data-testid="colorOption" class="opt-btn" id="btn5"></button>
+      <div id="score-cont">
+        <p>Score: <span id="score" data-testid="score">0</span></p>
+        <button id="new-game-btn" data-testid="newGameButton">Reset Game</button>
       </div>
 
       <p id="status" data-testid="gameStatus"></p>
-      <div>
-        <p>Score: <span id="score" data-testid="score">0</span></p>
-        <button id="new-game-btn" data-testid="newGameButton">New Game</button>
+  
+      <div id="game-cont">
+        <div id="target" data-testid="colorBox"></div>
+        
+        <div id="options">
+          <button data-testid="colorOption" class="opt-btn" id="btn1"></button>
+          <button data-testid="colorOption" class="opt-btn" id="btn2"></button>
+          <button data-testid="colorOption" class="opt-btn" id="btn3"></button>
+          <button data-testid="colorOption" class="opt-btn" id="btn4"></button>
+          <button data-testid="colorOption" class="opt-btn" id="btn5"></button>
+          <button data-testid="colorOption" class="opt-btn" id="btn6"></button>
+        </div>
+  
+        
+        
       </div>
-    </div>
+    </main>
 
     <script src="./main.js"></script>
   </body>
